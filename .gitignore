@@ -72,3 +72,7 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Bloomie Escape/Library/
+Bloomie Escape/Logs/
+Bloomie Escape/Temp/Burst/burst-aot0s1c0pi4.cyz/lib_burst_generated_part_da352d92cabf024fc9986011d52a4537.gbc
+Bloomie Escape/Temp/
