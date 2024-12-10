@@ -64,6 +64,6 @@ public class GameManagerDavid : MonoBehaviour
         botonReintentar.SetActive(false);
         tiempo = 0;
         activarCronometro = true;
-        iniciarEnemigo();
+        //iniciarEnemigo();
     }
 }
