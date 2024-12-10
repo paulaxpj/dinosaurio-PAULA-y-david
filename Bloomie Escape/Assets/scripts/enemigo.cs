@@ -38,4 +38,12 @@ public class enemigo : MonoBehaviour
         }
     }
 
+    public void iniciarEnemigo() 
+    {
+        transform.position=posicionInicial;
+        velocidad = 10;
+
+
+    }
+
 }
