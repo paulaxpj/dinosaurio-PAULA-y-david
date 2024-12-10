@@ -5,22 +5,44 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] int puntuacionActual, mejorPuntuacion;
+    [SerializeField] public int PuntuacionActual, MejorPuntuacion;
     [SerializeField] float tiempo;
-    [SerializeField] TMP_Text textoTiempo;
+    public static GameManager Instancia;
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        if (Instancia == null)
+        {
+            Instancia = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        MejorPuntuacion = PlayerPrefs.GetInt("MejorPuntuacion");
     }
 
     // Update is called once per frame
-    void Update()
+    public void Perder()
     {
-        tiempo += Time.deltaTime;
-        int minutos = (int)tiempo / 60;
-        int segundos = (int)tiempo % 60;
-        Debug.Log($"{minutos:D2}:{segundos:D2}");
-        textoTiempo.text = $"{minutos:D2}:{segundos:D2}"; //Ahora lo pongo esto uwuw
+
+    }
+
+    public void ReiniciarJuego()
+    {
+
+    }
+
+    public void ActualizarPuntuacion()
+    {
+        PuntuacionActual++;
+        if (PuntuacionActual > MejorPuntuacion)
+        {
+            MejorPuntuacion = PuntuacionActual;
+            PlayerPrefs.SetInt("MejorPuntuacion", MejorPuntuacion);
+        }
+
     }
 }

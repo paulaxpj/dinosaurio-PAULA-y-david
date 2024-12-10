@@ -32,6 +32,10 @@ public class Animaciones : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         animator.SetBool("Parametro1", false);
-        
+        if (collision.transform.tag == "enemigo")
+        {
+            GameManager.Instancia.Perder();
+        }
+
     }
 }
