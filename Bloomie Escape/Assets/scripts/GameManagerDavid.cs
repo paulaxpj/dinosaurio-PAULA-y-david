@@ -13,6 +13,7 @@ public class GameManagerDavid : MonoBehaviour
 
     [SerializeField] GameObject Bloomie;
     [SerializeField] GameObject enemigo;
+    [SerializeField] enemigo enemigo1;
 
     [SerializeField] bool activarCronometro;
 
@@ -64,6 +65,7 @@ public class GameManagerDavid : MonoBehaviour
         botonReintentar.SetActive(false);
         tiempo = 0;
         activarCronometro = true;
-        //iniciarEnemigo();
+        enemigo1.iniciarEnemigo();
     }
+
 }

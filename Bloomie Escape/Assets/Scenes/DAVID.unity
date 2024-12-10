@@ -153,6 +153,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiempo: 0
   textoTiempo: {fileID: 989993306}
+  pantallaGameOver: {fileID: 222166273}
+  botonReintentar: {fileID: 795225210}
+  Bloomie: {fileID: 806731748}
+  enemigo: {fileID: 365539185}
+  activarCronometro: 1
+  puntuacionActual: 0
 --- !u!4 &26504620
 Transform:
   m_ObjectHideFlags: 0
@@ -522,6 +528,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &365539185 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8101952753194099975, guid: c6291902a1ed3284f8393f5762666d53, type: 3}
+  m_PrefabInstance: {fileID: 1314000341}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &450390138
 GameObject:
   m_ObjectHideFlags: 0

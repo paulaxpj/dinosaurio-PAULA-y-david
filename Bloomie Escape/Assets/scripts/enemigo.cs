@@ -43,7 +43,6 @@ public class enemigo : MonoBehaviour
         transform.position=posicionInicial;
         velocidad = 10;
 
-
     }
 
 }
