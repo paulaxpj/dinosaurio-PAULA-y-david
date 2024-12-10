@@ -8,6 +8,9 @@ public class Animaciones : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] Rigidbody2D rb;
     [SerializeField] Vector3 PosicionInicial;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip[] audioClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +27,9 @@ public class Animaciones : MonoBehaviour
             animator.SetBool("Parametro1", true);
             rb.velocity = Vector3.zero;
             rb.AddForce(Vector3.up * altura);
+
+            audioSource.clip = audioClip[Random.Range(0,3)];
+            audioSource.Play();
         }
         
 
@@ -35,7 +41,9 @@ public class Animaciones : MonoBehaviour
         if (collision.transform.tag == "enemigo")
         {
             GameManager.Instancia.Perder();
+            
         }
+    
 
     }
 }

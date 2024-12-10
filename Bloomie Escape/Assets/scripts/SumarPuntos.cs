@@ -10,4 +10,5 @@ public class SumarPuntos : MonoBehaviour
             GameManager.Instancia.ActualizarPuntuacion();
 
     }
+  
 }
